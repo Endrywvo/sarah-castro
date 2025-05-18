@@ -1,7 +1,7 @@
 
 import React from 'react';
 import WhatsAppButton from './WhatsAppButton';
-import { mail, map, phone as phoneIcon } from 'lucide-react';
+import { Mail, Map, Phone } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -13,15 +13,15 @@ const Footer: React.FC = () => {
             <h3 className="text-xl font-semibold text-dental-pastelRed mb-4">Contato</h3>
             <div className="space-y-3">
               <p className="flex items-start">
-                <phoneIcon className="mr-2 h-5 w-5 text-dental-pastelPink shrink-0" />
+                <Phone className="mr-2 h-5 w-5 text-dental-pastelPink shrink-0" />
                 <span>(85) 9999-9999</span>
               </p>
               <p className="flex items-start">
-                <mail className="mr-2 h-5 w-5 text-dental-pastelPink shrink-0" />
+                <Mail className="mr-2 h-5 w-5 text-dental-pastelPink shrink-0" />
                 <span>contato@clinicaunicrhistos.com.br</span>
               </p>
               <p className="flex items-start">
-                <map className="mr-2 h-5 w-5 text-dental-pastelPink shrink-0" />
+                <Map className="mr-2 h-5 w-5 text-dental-pastelPink shrink-0" />
                 <span>Av. Principal, 1000, Bairro Universitário, Fortaleza - CE</span>
               </p>
             </div>

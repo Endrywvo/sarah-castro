@@ -53,15 +53,15 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-        dental: {
-          pastelRed: '#FFCBCB',
-          pastelPink: '#FFC1D5',
-          cream: '#FFF5E0',
-          softBlue: '#E5E7F0',
-        },
-				fontFamily: {
-					poppins: ['Poppins', 'sans-serif'],
-				},
+                dental: {
+                    pastelRed: '#FFCBCB',
+                    pastelPink: '#FFC1D5',
+                    cream: '#FFF5E0',
+                    softBlue: '#E5E7F0',
+                },
+			},
+			fontFamily: {
+				poppins: ['Poppins', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

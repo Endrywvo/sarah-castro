@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { phone } from 'lucide-react';
+import { Phone } from 'lucide-react';
 
 interface WhatsAppButtonProps {
   phoneNumber: string;
@@ -23,7 +23,7 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({
       rel="noopener noreferrer"
     >
       <Button className="bg-[#25D366] hover:bg-[#128C7E] text-white flex items-center gap-2">
-        <phone />
+        <Phone />
         <span>Agende pelo WhatsApp</span>
       </Button>
     </a>
