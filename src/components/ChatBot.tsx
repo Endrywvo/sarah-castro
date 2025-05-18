@@ -51,17 +51,17 @@ const ChatBot: React.FC = () => {
       const userMessage = inputText.toLowerCase();
       
       if (userMessage.includes("horário") || userMessage.includes("atendimento")) {
-        botResponse = "Nosso horário de atendimento é de segunda a sexta, das 8h às 18h, e aos sábados das 8h às 12h.";
+        botResponse = "Nosso horário de atendimento é nas quartas-feiras das 7:20 às 10:30 para atendimentos gerais, e nas sextas-feiras no mesmo horário para radiografias.";
       } else if (userMessage.includes("consulta") || userMessage.includes("agendar") || userMessage.includes("marcar")) {
-        botResponse = "Para agendar uma consulta, você pode nos ligar no (85) 9999-9999 ou clicar no botão do WhatsApp abaixo do site para falar diretamente com nossa equipe.";
+        botResponse = "Para agendar uma consulta, você pode nos ligar no (85) 8793-7718 ou clicar no botão do WhatsApp abaixo do site para falar diretamente com nossa equipe.";
       } else if (userMessage.includes("preço") || userMessage.includes("valor") || userMessage.includes("custo")) {
         botResponse = "Os valores variam de acordo com o procedimento. Como somos uma clínica-escola, nossos preços são mais acessíveis. Entre em contato para um orçamento personalizado.";
       } else if (userMessage.includes("serviços") || userMessage.includes("procedimento") || userMessage.includes("tratamento")) {
-        botResponse = "Oferecemos diversos serviços como limpeza, restaurações, clareamento dental, ortodontia, implantes e tratamento de canal. Veja mais detalhes na seção de Serviços do nosso site.";
+        botResponse = "Oferecemos serviços como limpeza e profilaxia, tratamento de cáries, canal (endodontia), restaurações e extrações. Veja mais detalhes na seção de Serviços do nosso site.";
       } else if (userMessage.includes("endereço") || userMessage.includes("localização") || userMessage.includes("onde fica")) {
         botResponse = "Estamos localizados no campus da Faculdade UniCrhistos, na Av. Principal, 1000, Bairro Universitário.";
-      } else if (userMessage.includes("convênio") || userMessage.includes("plano") || userMessage.includes("seguro")) {
-        botResponse = "Aceitamos diversos convênios odontológicos. Entre em contato para verificar se o seu está na nossa lista de parceiros.";
+      } else if (userMessage.includes("quarta") || userMessage.includes("radiografia") || userMessage.includes("sexta")) {
+        botResponse = "Atendimentos gerais ocorrem nas quartas-feiras das 7:20 às 10:30, e radiografias são realizadas nas sextas-feiras no mesmo horário.";
       }
 
       setMessages(prev => [...prev, { text: botResponse, isBot: true }]);
