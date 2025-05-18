@@ -10,16 +10,17 @@ const AboutSection: React.FC = () => {
           <div className="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Sobre Nossa Clínica</h2>
             <p className="text-gray-600 mb-4">
-              A Clínica Odontológica da Faculdade UniCrhistos oferece tratamentos de excelência aliando conhecimento acadêmico 
-              e tecnologia de ponta. Nosso compromisso é proporcionar saúde bucal de qualidade com atendimento humanizado.
+              Sarah Castro é estudante de Clínica 1 na Unichristus, em formação na área de odontologia 
+              com foco em atendimentos tratamentais. Atua em procedimentos como tratamento de canal, 
+              restaurações, limpezas profundas e extrações.
             </p>
             <p className="text-gray-600 mb-4">
-              Nossa equipe é formada por professores experientes e alunos em formação, sempre supervisionados para garantir 
-              o melhor atendimento. Utilizamos materiais e técnicas modernas para garantir procedimentos seguros e eficazes.
+              A Clínica Escola de Odontologia da Unichristus oferece atendimento de qualidade 
+              supervisionado por professores experientes, garantindo segurança e eficácia nos procedimentos.
             </p>
             <p className="text-gray-600">
-              Localizada no campus da UniCrhistos, nossa clínica é equipada com consultórios modernos, equipamentos de última 
-              geração e segue todos os protocolos de biossegurança.
+              Localizada no campus da Unichristus, nossa clínica é equipada com consultórios modernos
+              e segue todos os protocolos de biossegurança.
             </p>
           </div>
           

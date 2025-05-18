@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,16 +13,19 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <h1 className="text-2xl font-semibold text-dental-pastelPink">
-              <span className="text-dental-pastelRed">Sorriso</span> Clínica
+              <Link to="/">
+                <span className="text-dental-pastelRed">Odonto</span> Unichristus
+              </Link>
             </h1>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-6">
-            <a href="#home" className="text-gray-700 hover:text-dental-pastelPink transition">Início</a>
-            <a href="#services" className="text-gray-700 hover:text-dental-pastelPink transition">Serviços</a>
-            <a href="#about" className="text-gray-700 hover:text-dental-pastelPink transition">Sobre</a>
-            <a href="#contact" className="text-gray-700 hover:text-dental-pastelPink transition">Contato</a>
+            <Link to="/#home" className="text-gray-700 hover:text-dental-pastelPink transition">Início</Link>
+            <Link to="/#services" className="text-gray-700 hover:text-dental-pastelPink transition">Serviços</Link>
+            <Link to="/#about" className="text-gray-700 hover:text-dental-pastelPink transition">Sobre</Link>
+            <Link to="/reviews" className="text-gray-700 hover:text-dental-pastelPink transition">Avaliações</Link>
+            <Link to="/#contact" className="text-gray-700 hover:text-dental-pastelPink transition">Contato</Link>
           </div>
 
           {/* Mobile Navigation Button */}
@@ -39,10 +43,11 @@ const Navbar: React.FC = () => {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 space-y-3">
-            <a href="#home" className="block text-gray-700 hover:text-dental-pastelPink py-2" onClick={() => setIsMenuOpen(false)}>Início</a>
-            <a href="#services" className="block text-gray-700 hover:text-dental-pastelPink py-2" onClick={() => setIsMenuOpen(false)}>Serviços</a>
-            <a href="#about" className="block text-gray-700 hover:text-dental-pastelPink py-2" onClick={() => setIsMenuOpen(false)}>Sobre</a>
-            <a href="#contact" className="block text-gray-700 hover:text-dental-pastelPink py-2" onClick={() => setIsMenuOpen(false)}>Contato</a>
+            <Link to="/#home" className="block text-gray-700 hover:text-dental-pastelPink py-2" onClick={() => setIsMenuOpen(false)}>Início</Link>
+            <Link to="/#services" className="block text-gray-700 hover:text-dental-pastelPink py-2" onClick={() => setIsMenuOpen(false)}>Serviços</Link>
+            <Link to="/#about" className="block text-gray-700 hover:text-dental-pastelPink py-2" onClick={() => setIsMenuOpen(false)}>Sobre</Link>
+            <Link to="/reviews" className="block text-gray-700 hover:text-dental-pastelPink py-2" onClick={() => setIsMenuOpen(false)}>Avaliações</Link>
+            <Link to="/#contact" className="block text-gray-700 hover:text-dental-pastelPink py-2" onClick={() => setIsMenuOpen(false)}>Contato</Link>
           </div>
         )}
       </div>

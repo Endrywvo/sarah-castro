@@ -27,34 +27,29 @@ const ServiceCard: React.FC<ServiceProps> = ({ title, description, icon }) => {
 const ServicesSection: React.FC = () => {
   const services = [
     {
-      title: "Limpeza Dental",
+      title: "Limpeza e Profilaxia",
       description: "Procedimentos de limpeza profunda para remover tártaro e prevenir problemas bucais.",
       icon: "🦷"
     },
     {
-      title: "Clareamento",
-      description: "Tratamentos de clareamento dental para um sorriso mais branco e radiante.",
-      icon: "✨"
+      title: "Tratamento de Cáries",
+      description: "Diagnóstico e tratamento de cáries para prevenir danos maiores aos dentes.",
+      icon: "🔍"
     },
     {
-      title: "Ortodontia",
-      description: "Aparelhos fixos e removíveis para correção de alinhamento dental.",
-      icon: "😁"
+      title: "Canal (Endodontia)",
+      description: "Tratamento de canal para salvar dentes com infecção ou danos na polpa dental.",
+      icon: "💉"
     },
     {
       title: "Restaurações",
-      description: "Restaurações estéticas com materiais de alta durabilidade para dentes danificados.",
+      description: "Restaurações com materiais de alta durabilidade para dentes danificados.",
       icon: "🔧"
     },
     {
-      title: "Implantes",
-      description: "Implantes dentários de alta tecnologia para substituir dentes perdidos.",
+      title: "Extrações",
+      description: "Extração de dentes comprometidos que não podem ser salvos por outros tratamentos.",
       icon: "🔄"
-    },
-    {
-      title: "Tratamento de Canal",
-      description: "Procedimentos de endodontia para salvar dentes com lesões profundas.",
-      icon: "💉"
     }
   ];
 
@@ -64,7 +59,7 @@ const ServicesSection: React.FC = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Nossos Serviços</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Oferecemos uma ampla gama de procedimentos odontológicos para cuidar da sua saúde bucal.
+            Oferecemos procedimentos odontológicos focados no tratamento e na saúde bucal.
           </p>
         </div>
         

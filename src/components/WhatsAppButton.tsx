@@ -4,13 +4,15 @@ import { Button } from '@/components/ui/button';
 import { Phone } from 'lucide-react';
 
 interface WhatsAppButtonProps {
-  phoneNumber: string;
+  phoneNumber?: string;
   message?: string;
+  children?: React.ReactNode;
 }
 
 const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ 
-  phoneNumber,
-  message = "Olá! Gostaria de agendar uma consulta."
+  phoneNumber = "558587937718",
+  message = "Olá! Gostaria de agendar uma consulta.",
+  children
 }) => {
   const formattedPhone = phoneNumber.replace(/\D/g, '');
   const encodedMessage = encodeURIComponent(message);
@@ -24,7 +26,7 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({
     >
       <Button className="bg-[#25D366] hover:bg-[#128C7E] text-white flex items-center gap-2">
         <Phone />
-        <span>Agende pelo WhatsApp</span>
+        <span>{children || "Fale conosco no WhatsApp"}</span>
       </Button>
     </a>
   );
