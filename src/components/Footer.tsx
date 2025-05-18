@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
   return (
     <footer id="contact" className="bg-dental-softBlue py-16">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Contact Info */}
           <div>
             <h3 className="text-xl font-semibold text-dental-pastelRed mb-4">Contato</h3>
@@ -27,25 +27,6 @@ const Footer: React.FC = () => {
             </div>
           </div>
           
-          {/* Hours */}
-          <div>
-            <h3 className="text-xl font-semibold text-dental-pastelRed mb-4">Horário</h3>
-            <div className="space-y-2">
-              <p className="flex items-center justify-between">
-                <span className="font-medium">Segunda - Sexta:</span>
-                <span>08:00 - 18:00</span>
-              </p>
-              <p className="flex items-center justify-between">
-                <span className="font-medium">Sábado:</span>
-                <span>08:00 - 12:00</span>
-              </p>
-              <p className="flex items-center justify-between">
-                <span className="font-medium">Domingo:</span>
-                <span>Fechado</span>
-              </p>
-            </div>
-          </div>
-          
           {/* Links */}
           <div>
             <h3 className="text-xl font-semibold text-dental-pastelRed mb-4">Links Rápidos</h3>
@@ -55,6 +36,9 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <a href="#services" className="hover:text-dental-pastelRed transition">Serviços</a>
+              </li>
+              <li>
+                <a href="#schedule" className="hover:text-dental-pastelRed transition">Horários</a>
               </li>
               <li>
                 <a href="#about" className="hover:text-dental-pastelRed transition">Sobre</a>

@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -51,7 +50,7 @@ const ChatBot: React.FC = () => {
       const userMessage = inputText.toLowerCase();
       
       if (userMessage.includes("horário") || userMessage.includes("atendimento")) {
-        botResponse = "Nosso horário de atendimento é nas quartas-feiras das 7:20 às 10:30 para atendimentos gerais, e nas sextas-feiras no mesmo horário para radiografias.";
+        botResponse = "Nosso horário de atendimento é nas quartas-feiras das 7:20 às 10:30 para atendimentos gerais, e nas sextas-feiras no mesmo horário para radiografias. A Radiografia 1 está disponível às sextas-feiras.";
       } else if (userMessage.includes("consulta") || userMessage.includes("agendar") || userMessage.includes("marcar")) {
         botResponse = "Para agendar uma consulta, você pode nos ligar no (85) 8793-7718 ou clicar no botão do WhatsApp abaixo do site para falar diretamente com nossa equipe.";
       } else if (userMessage.includes("preço") || userMessage.includes("valor") || userMessage.includes("custo")) {
@@ -59,9 +58,9 @@ const ChatBot: React.FC = () => {
       } else if (userMessage.includes("serviços") || userMessage.includes("procedimento") || userMessage.includes("tratamento")) {
         botResponse = "Oferecemos serviços como limpeza e profilaxia, tratamento de cáries, canal (endodontia), restaurações e extrações. Veja mais detalhes na seção de Serviços do nosso site.";
       } else if (userMessage.includes("endereço") || userMessage.includes("localização") || userMessage.includes("onde fica")) {
-        botResponse = "Estamos localizados no campus da Faculdade UniCrhistos, na Av. Principal, 1000, Bairro Universitário.";
+        botResponse = "Estamos localizados no campus da Faculdade UniCrhistus, na Av. Principal, 1000, Bairro Universitário.";
       } else if (userMessage.includes("quarta") || userMessage.includes("radiografia") || userMessage.includes("sexta")) {
-        botResponse = "Atendimentos gerais ocorrem nas quartas-feiras das 7:20 às 10:30, e radiografias são realizadas nas sextas-feiras no mesmo horário.";
+        botResponse = "Atendimentos gerais ocorrem nas quartas-feiras das 7:20 às 10:30, e radiografias são realizadas nas sextas-feiras no mesmo horário. A Radiografia 1 está disponível às sextas-feiras.";
       }
 
       setMessages(prev => [...prev, { text: botResponse, isBot: true }]);

@@ -39,10 +39,14 @@ const ScheduleSection: React.FC = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="pt-6">
-              <div className="flex items-center gap-3 text-gray-700">
+              <div className="flex items-center gap-3 text-gray-700 mb-2">
                 <Clock className="h-5 w-5 text-dental-pastelPink" />
                 <span className="font-medium">07:20 - 10:30</span>
                 <span className="ml-2 text-sm text-gray-500">Radiografia</span>
+              </div>
+              <div className="mt-2 bg-dental-cream/20 p-3 rounded-md text-sm">
+                <p className="text-dental-pastelRed font-medium">Informação importante:</p>
+                <p className="text-gray-600">Radiografia 1 disponível às sextas-feiras.</p>
               </div>
             </CardContent>
           </Card>
