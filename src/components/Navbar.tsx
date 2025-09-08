@@ -24,8 +24,6 @@ const Navbar: React.FC = () => {
             <Link to="/#home" className="text-gray-700 hover:text-educational-green transition">Início</Link>
             <Link to="/#about" className="text-gray-700 hover:text-educational-green transition">Quem Sou</Link>
             <Link to="/#guide" className="text-gray-700 hover:text-educational-green transition">Guia de Higiene</Link>
-            <Link to="/#schedule" className="text-gray-700 hover:text-educational-green transition">Horários</Link>
-            <Link to="/reviews" className="text-gray-700 hover:text-educational-green transition">Avaliações</Link>
           </div>
 
           {/* Mobile Navigation Button */}
@@ -46,8 +44,6 @@ const Navbar: React.FC = () => {
             <Link to="/#home" className="block text-gray-700 hover:text-educational-green py-2" onClick={() => setIsMenuOpen(false)}>Início</Link>
             <Link to="/#about" className="block text-gray-700 hover:text-educational-green py-2" onClick={() => setIsMenuOpen(false)}>Quem Sou</Link>
             <Link to="/#guide" className="block text-gray-700 hover:text-educational-green py-2" onClick={() => setIsMenuOpen(false)}>Guia de Higiene</Link>
-            <Link to="/#schedule" className="block text-gray-700 hover:text-educational-green py-2" onClick={() => setIsMenuOpen(false)}>Horários</Link>
-            <Link to="/reviews" className="block text-gray-700 hover:text-educational-green py-2" onClick={() => setIsMenuOpen(false)}>Avaliações</Link>
           </div>
         )}
       </div>

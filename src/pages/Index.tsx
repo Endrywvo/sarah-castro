@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
 import WhoAmISection from '../components/WhoAmISection';
 import HygieneGuideSection from '../components/HygieneGuideSection';
-import ScheduleSection from '../components/ScheduleSection';
+
 import Footer from '../components/Footer';
 import ChatBot from '../components/ChatBot';
 
@@ -16,7 +16,6 @@ const Index: React.FC = () => {
         <HeroSection />
         <WhoAmISection />
         <HygieneGuideSection />
-        <ScheduleSection />
       </main>
       <Footer />
       <ChatBot />
