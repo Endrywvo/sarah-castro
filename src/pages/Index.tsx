@@ -2,8 +2,8 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
-import ServicesSection from '../components/ServicesSection';
-import AboutSection from '../components/AboutSection';
+import WhoAmISection from '../components/WhoAmISection';
+import HygieneGuideSection from '../components/HygieneGuideSection';
 import ScheduleSection from '../components/ScheduleSection';
 import Footer from '../components/Footer';
 import ChatBot from '../components/ChatBot';
@@ -14,9 +14,9 @@ const Index: React.FC = () => {
       <Navbar />
       <main>
         <HeroSection />
-        <ServicesSection />
+        <WhoAmISection />
+        <HygieneGuideSection />
         <ScheduleSection />
-        <AboutSection />
       </main>
       <Footer />
       <ChatBot />

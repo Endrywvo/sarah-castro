@@ -53,11 +53,11 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-                dental: {
-                    pastelRed: '#FFCBCB',
-                    pastelPink: '#FFC1D5',
-                    cream: '#FFF5E0',
-                    softBlue: '#E5E7F0',
+                educational: {
+                    green: 'hsl(var(--educational-green))',
+                    blue: 'hsl(var(--educational-blue))',
+                    light: 'hsl(var(--educational-light))',
+                    text: 'hsl(var(--educational-text))',
                 },
 			},
 			fontFamily: {

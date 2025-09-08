@@ -10,8 +10,8 @@ interface Message {
 }
 
 const initialBotMessages = [
-  "Olá! Sou o assistente virtual da Clínica Odontológica UniCrhistos. Como posso te ajudar hoje?",
-  "Posso te ajudar com: horários de atendimento, serviços disponíveis, marcar consulta, valores ou outras informações.",
+  "Olá! Sou o assistente da Sarah Castro - Atendimentos Odontológicos Unichristus. Como posso te ajudar hoje?",
+  "Posso te ajudar com: horários de atendimento, dicas de higiene oral, agendamento de consultas e informações educativas sobre saúde bucal.",
 ];
 
 const ChatBot: React.FC = () => {
@@ -52,13 +52,17 @@ const ChatBot: React.FC = () => {
       if (userMessage.includes("horário") || userMessage.includes("atendimento")) {
         botResponse = "Nosso horário de atendimento é nas quartas-feiras das 7:20 às 10:30 para atendimentos gerais, e nas sextas-feiras no mesmo horário para radiografias. A Radiografia 1 está disponível às sextas-feiras.";
       } else if (userMessage.includes("consulta") || userMessage.includes("agendar") || userMessage.includes("marcar")) {
-        botResponse = "Para agendar uma consulta, você pode nos ligar no (85) 8793-7718 ou clicar no botão do WhatsApp abaixo do site para falar diretamente com nossa equipe.";
-      } else if (userMessage.includes("preço") || userMessage.includes("valor") || userMessage.includes("custo")) {
-        botResponse = "Os valores variam de acordo com o procedimento. Como somos uma clínica-escola, nossos preços são mais acessíveis. Entre em contato para um orçamento personalizado.";
-      } else if (userMessage.includes("serviços") || userMessage.includes("procedimento") || userMessage.includes("tratamento")) {
-        botResponse = "Oferecemos serviços como limpeza e profilaxia, tratamento de cáries, canal (endodontia), restaurações e extrações. Veja mais detalhes na seção de Serviços do nosso site.";
-      } else if (userMessage.includes("endereço") || userMessage.includes("localização") || userMessage.includes("onde fica")) {
-        botResponse = "Estamos localizados no campus da Faculdade UniCrhistus, na Av. Principal, 1000, Bairro Universitário.";
+        botResponse = "Para agendar uma consulta, você pode entrar em contato pelo WhatsApp. A Sarah atende de forma supervisionada na clínica-escola da Unichristus.";
+      } else if (userMessage.includes("fio dental") || userMessage.includes("escovar") || userMessage.includes("higiene")) {
+        botResponse = "🦷 Dicas de higiene oral: Use 40cm de fio dental diariamente, escove os dentes 3x ao dia por 2 minutos com pasta com flúor, e troque a escova a cada 3 meses. Confira nosso Guia Prático de Higiene Oral no site!";
+      } else if (userMessage.includes("sarah") || userMessage.includes("quem") || userMessage.includes("estudante")) {
+        botResponse = "Sarah Castro é estudante de odontologia da Unichristus e atende pacientes de forma supervisionada. Sua missão é transmitir conhecimento sobre autocuidado e higiene oral através de orientações educativas.";
+      } else if (userMessage.includes("instagram") || userMessage.includes("rede social")) {
+        botResponse = "Você pode acompanhar a rotina acadêmica da Sarah e ver posts educativos no Instagram dela! Lá você encontra informações adicionais e conteúdo interativo sobre saúde bucal.";
+      } else if (userMessage.includes("enxaguante") || userMessage.includes("bochechar")) {
+        botResponse = "⚠️ Importante: O enxaguante bucal NÃO substitui a escovação! Ele apenas reduz temporariamente a carga bacteriana e refresca o hálito. A escova e o fio dental são essenciais para remover a placa bacteriana.";
+      } else if (userMessage.includes("pasta") || userMessage.includes("flúor")) {
+        botResponse = "Use sempre pasta de dente com flúor - é fundamental para prevenir cáries! A pasta deve conter flúor para ser eficaz na proteção dos seus dentes.";
       } else if (userMessage.includes("quarta") || userMessage.includes("radiografia") || userMessage.includes("sexta")) {
         botResponse = "Atendimentos gerais ocorrem nas quartas-feiras das 7:20 às 10:30, e radiografias são realizadas nas sextas-feiras no mesmo horário. A Radiografia 1 está disponível às sextas-feiras.";
       }
@@ -78,7 +82,7 @@ const ChatBot: React.FC = () => {
       {/* Chat Button */}
       <Button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 rounded-full w-14 h-14 bg-dental-pastelPink hover:bg-dental-pastelRed flex items-center justify-center shadow-lg"
+        className="fixed bottom-6 right-6 rounded-full w-14 h-14 bg-educational-green hover:bg-educational-blue flex items-center justify-center shadow-lg"
         aria-label="Abrir chat"
       >
         <Bot size={24} className="text-white" />
@@ -86,18 +90,18 @@ const ChatBot: React.FC = () => {
 
       {/* Chat Window */}
       {isOpen && (
-        <Card className="fixed bottom-20 right-6 w-80 md:w-96 h-96 shadow-xl flex flex-col overflow-hidden z-50 border-dental-pastelPink">
+        <Card className="fixed bottom-20 right-6 w-80 md:w-96 h-96 shadow-xl flex flex-col overflow-hidden z-50 border-educational-green">
           {/* Chat Header */}
-          <div className="bg-dental-pastelPink px-4 py-3 flex justify-between items-center">
+          <div className="bg-educational-green px-4 py-3 flex justify-between items-center">
             <div className="flex items-center">
               <Bot size={20} className="text-white mr-2" />
-              <h3 className="text-white font-medium">Assistente Dental</h3>
+              <h3 className="text-white font-medium">Assistente Educativo</h3>
             </div>
             <Button 
               variant="ghost" 
               size="sm" 
               onClick={() => setIsOpen(false)}
-              className="text-white hover:bg-dental-pastelRed/20 p-1 h-auto"
+              className="text-white hover:bg-educational-blue/20 p-1 h-auto"
             >
               <X size={18} />
             </Button>
@@ -111,7 +115,7 @@ const ChatBot: React.FC = () => {
                 className={`mb-3 chat-bubble ${
                   message.isBot 
                     ? "bg-white border border-gray-200" 
-                    : "bg-dental-pastelPink/20 ml-auto"
+                    : "bg-educational-blue/20 ml-auto"
                 } rounded-lg p-3 max-w-[80%] ${message.isBot ? "mr-auto" : "ml-auto"}`}
               >
                 {message.text}
@@ -133,7 +137,7 @@ const ChatBot: React.FC = () => {
               <Button 
                 onClick={handleSendMessage}
                 disabled={!inputText.trim()}
-                className="bg-dental-pastelPink hover:bg-dental-pastelRed text-white"
+                className="bg-educational-green hover:bg-educational-blue text-white"
               >
                 Enviar
               </Button>
