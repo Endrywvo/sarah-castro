@@ -10,8 +10,11 @@ const HeroSection: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center">
           <div className="lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Sarah Castro cuidado odontológico
+              Sarah Castro
             </h1>
+            <p className="text-2xl md:text-3xl mb-4 font-medium text-white">
+              Atendimentos Odontológicos
+            </p>
             <p className="text-lg md:text-xl mb-8 text-white/90">
               Educação e cuidado para um sorriso saudável
             </p>
