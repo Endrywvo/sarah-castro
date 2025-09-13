@@ -7,37 +7,37 @@
 
 @layer base {
   :root {
-    --background: 248 100% 97%;
+    --background: 344 100% 97%;
     --foreground: 210 40% 15%;
 
-    --card: 0 0% 100%;
+    --card: 344 100% 97%;
     --card-foreground: 210 40% 15%;
 
-    --popover: 0 0% 100%;
+    --popover: 344 100% 97%;
     --popover-foreground: 210 40% 15%;
 
-    --primary: 158 50% 65%;
+    --primary: 344 61% 66%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 214 100% 85%;
+    --secondary: 344 100% 90%;
     --secondary-foreground: 210 40% 15%;
 
-    --muted: 210 40% 96%;
+    --muted: 344 100% 95%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 180 100% 90%;
+    --accent: 344 100% 92%;
     --accent-foreground: 210 40% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 158 50% 65%;
+    --border: 344 50% 91%;
+    --input: 344 50% 91%;
+    --ring: 344 61% 66%;
 
-    --educational-green: 158 50% 65%;
-    --educational-blue: 214 100% 85%;
-    --educational-light: 180 100% 95%;
+    --educational-primary: 344 61% 66%;
+    --educational-light: 344 100% 90%;
+    --educational-dynamic: 344 100% 92%;
     --educational-text: 210 40% 25%;
 
     --radius: 1rem;
@@ -54,7 +54,7 @@
   }
 
   .hero-gradient {
-    background: linear-gradient(135deg, #FFCBCB 0%, #FFC1D5 100%);
+    background: linear-gradient(135deg, #ffdee7 0%, #ffeaea 100%);
   }
 
   .service-card:hover {
