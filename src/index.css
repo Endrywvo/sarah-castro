@@ -16,17 +16,17 @@
     --popover: 0 0% 100%;
     --popover-foreground: 210 40% 15%;
 
-    --primary: 158 50% 65%;
+    --primary: 339 61% 60%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 214 100% 85%;
-    --secondary-foreground: 210 40% 15%;
+    --secondary: 335 100% 95%;
+    --secondary-foreground: 339 61% 60%;
 
-    --muted: 210 40% 96%;
+    --muted: 48 100% 97%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 180 100% 90%;
-    --accent-foreground: 210 40% 15%;
+    --accent: 335 100% 95%;
+    --accent-foreground: 339 61% 60%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -35,9 +35,9 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 158 50% 65%;
 
-    --educational-green: 158 50% 65%;
-    --educational-blue: 214 100% 85%;
-    --educational-light: 180 100% 95%;
+    --educational-pink: 335 100% 95%;
+    --educational-rose: 339 61% 60%;
+    --educational-cream: 48 100% 97%;
     --educational-text: 210 40% 25%;
 
     --radius: 1rem;
