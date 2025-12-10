@@ -69,7 +69,7 @@ const WhoAmISection: React.FC = () => {
             <div className="relative">
               <div className="w-full max-w-md mx-auto">
                 <div className="bg-gradient-to-br from-primary to-primary/70 p-8 rounded-3xl text-primary-foreground text-center shadow-2xl">
-                  <div className="text-6xl mb-4 float">👩‍⚕️</div>
+                  <div className="text-6xl mb-4 float">👩🏻‍⚕️</div>
                   <h3 className="text-2xl font-bold mb-2">Sarah Castro</h3>
                   <p className="text-lg mb-4 opacity-90">Estudante de Odontologia</p>
                   <div className="bg-white/20 rounded-xl p-4 backdrop-blur-sm">
