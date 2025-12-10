@@ -7,37 +7,37 @@
 
 @layer base {
   :root {
-    --background: 344 100% 97%;
+    --background: 0 100% 98%;
     --foreground: 210 40% 15%;
 
-    --card: 344 100% 97%;
+    --card: 0 0% 100%;
     --card-foreground: 210 40% 15%;
 
-    --popover: 344 100% 97%;
+    --popover: 0 0% 100%;
     --popover-foreground: 210 40% 15%;
 
-    --primary: 344 61% 66%;
+    --primary: 350 70% 60%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 344 100% 90%;
+    --secondary: 350 100% 94%;
     --secondary-foreground: 210 40% 15%;
 
-    --muted: 344 100% 95%;
+    --muted: 350 50% 96%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 344 100% 92%;
+    --accent: 0 100% 96%;
     --accent-foreground: 210 40% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 344 50% 91%;
-    --input: 344 50% 91%;
-    --ring: 344 61% 66%;
+    --border: 350 30% 90%;
+    --input: 350 30% 90%;
+    --ring: 350 70% 60%;
 
-    --educational-primary: 344 61% 66%;
-    --educational-light: 344 100% 90%;
-    --educational-dynamic: 344 100% 92%;
+    --educational-primary: 350 70% 60%;
+    --educational-light: 350 100% 94%;
+    --educational-dynamic: 0 100% 96%;
     --educational-text: 210 40% 25%;
 
     --radius: 1rem;
@@ -54,29 +54,117 @@
   }
 
   .hero-gradient {
-    background: linear-gradient(135deg, #ffdee7 0%, #ffeaea 100%);
+    background: linear-gradient(135deg, hsl(350 100% 93%) 0%, hsl(0 100% 96%) 100%);
+  }
+
+  .service-card {
+    @apply transition-all duration-300 ease-out;
   }
 
   .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(219, 83, 109, 0.15);
   }
 
   .chat-bubble {
-    animation: bounce-in 0.5s;
+    animation: bubble-in 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
-  @keyframes bounce-in {
+  @keyframes bubble-in {
     0% {
-      transform: scale(0);
+      transform: scale(0) translateY(10px);
       opacity: 0;
+    }
+    100% {
+      transform: scale(1) translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .fade-in-up {
+    animation: fade-in-up 0.6s ease-out forwards;
+  }
+
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .scale-in {
+    animation: scale-in 0.5s ease-out forwards;
+  }
+
+  @keyframes scale-in {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .slide-in-right {
+    animation: slide-in-right 0.4s ease-out forwards;
+  }
+
+  @keyframes slide-in-right {
+    0% {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .pulse-soft {
+    animation: pulse-soft 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-soft {
+    0%, 100% {
+      transform: scale(1);
     }
     50% {
       transform: scale(1.05);
     }
-    100% {
-      transform: scale(1);
-      opacity: 1;
+  }
+
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
     }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(219, 83, 109, 0.2);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(350 70% 55%) 0%, hsl(350 70% 65%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }
