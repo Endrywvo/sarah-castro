@@ -55,10 +55,10 @@ const WhoAmISection: React.FC = () => {
                     <p className="text-muted-foreground mb-4 leading-relaxed">
                       No meu Instagram você poderá obter informações adicionais sobre minha rotina acadêmica.
                     </p>
-                    <Button className="bg-gradient-to-r from-pink-400 to-pink-500 hover:from-pink-500 hover:to-pink-600 text-white shadow-lg hover-lift">
-                      <Instagram className="mr-2 h-4 w-4" />
+                    <a href="https://www.instagram.com/sarahcastrcc?igsh=OHRmZWx2a3p4N21m" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-4 py-2 rounded-md font-medium hover:bg-primary/90 text-primary-foreground group/btn transition-all bg-gradient-to-r from-pink-400 to-pink-500 hover:from-pink-500 hover:to-pink-600 text-white shadow-lg hover-lift">
+                      <Instagram className="mr-2 h-4 w-4" /> 
                       Seguir no Instagram
-                    </Button>
+                    </a>
                   </div>
                 </div>
               </CardContent>

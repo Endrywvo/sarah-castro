@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
           <Heart className="w-4 h-4 text-primary fill-primary" />
         </div>
         <p className="text-muted-foreground text-sm mt-4">
-          © {new Date().getFullYear()} - Atendimentos Odontológicos Unichristus
+          © {new Date().getFullYear()} - Sarah Castro. Todos os direitos reservados.
         </p>
       </div>
     </footer>

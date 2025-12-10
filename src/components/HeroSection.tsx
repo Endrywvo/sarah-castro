@@ -21,7 +21,7 @@ const HeroSection: React.FC = () => {
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
               <Button 
                 size="lg" 
-                className="bg-primary text-primary-foreground hover:bg-primary/90 hover-lift shadow-lg"
+                className="hover:bg-primary/90 text-primary-foreground group/btn transition-all bg-primary text-primary-foreground hover:bg-primary/90 hover-lift shadow-lg"
                 onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 <Heart className="mr-2 h-5 w-5" />

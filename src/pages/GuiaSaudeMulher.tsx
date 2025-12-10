@@ -170,7 +170,7 @@ const GuiaSaudeMulher: React.FC = () => {
                 </p>
                 <Button 
                   onClick={handleDownloadPDF}
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover-lift"
+                  className="hover:bg-primary/90 text-primary-foreground group/btn transition-all w-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover-lift"
                 >
                   <Download className="w-4 h-4 mr-2" />
                   Download PDF
