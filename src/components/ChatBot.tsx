@@ -9,27 +9,94 @@ interface Message {
   isBot: boolean;
 }
 
-const dentalTips = [
-  "🦷 Escove os dentes por pelo menos 2 minutos, 3 vezes ao dia - ao acordar, após as refeições e antes de dormir.",
-  "🪥 Use escova de cerdas macias e troque a cada 3 meses ou quando as cerdas estiverem desgastadas.",
-  "✨ Use sempre pasta de dente com flúor - é fundamental para prevenir cáries!",
-  "🧵 O fio dental deve ser usado diariamente, passando entre a gengiva e os dentes, não apenas entre os dentes.",
-  "💧 Beba bastante água! Ela ajuda a limpar os resíduos da boca e estimula a produção de saliva.",
-  "🍎 Alimentos como maçã, cenoura e aipo ajudam na limpeza natural dos dentes.",
-  "🥛 Laticínios são ricos em cálcio e fósforo, essenciais para dentes fortes.",
-  "🚫 Evite alimentos muito açucarados e bebidas ácidas que podem danificar o esmalte.",
-  "⚠️ O enxaguante bucal NÃO substitui a escovação - ele apenas complementa a higiene.",
-  "👩‍⚕️ Visite o dentista a cada 6 meses para check-ups e limpeza profissional.",
-  "🌙 Nunca durma sem escovar os dentes! Durante a noite, as bactérias se multiplicam.",
-  "👅 Não esqueça de limpar a língua - ela acumula bactérias que causam mau hálito.",
-  "⏰ Use 40cm de fio dental (tamanho do antebraço) para uma limpeza eficaz.",
-  "🔄 Faça movimentos circulares com a escova, inclinada em direção à gengiva.",
-  "🍬 Se comer doces, escove os dentes em seguida ou enxágue a boca com água."
-];
+// Base de conhecimento expandida sobre saúde bucal
+const knowledgeBase = {
+  escovacao: {
+    keywords: ["escovar", "escovação", "escova", "escovas", "escovando"],
+    response: "🪥 **Escovação Correta:**\n\n• Escove por **2-3 minutos**, 3x ao dia\n• Use escova de **cerdas macias**\n• Faça **movimentos circulares** suaves\n• Incline a escova 45° em direção à gengiva\n• Escove todas as faces: externa, interna e mastigação\n• **Troque a escova** a cada 3 meses\n• Não aplique força excessiva!"
+  },
+  fioDental: {
+    keywords: ["fio dental", "fio", "dental", "interdental", "limpeza entre"],
+    response: "🧵 **Uso Correto do Fio Dental:**\n\n• Use **40cm** de fio (tamanho do antebraço)\n• Enrole nas pontas dos dedos médios\n• Deslize suavemente entre os dentes\n• Forme um **'C'** ao redor de cada dente\n• Passe pela **linha da gengiva** gentilmente\n• Use uma parte limpa para cada dente\n• Faça **1x ao dia**, preferencialmente à noite"
+  },
+  pasta: {
+    keywords: ["pasta", "creme dental", "flúor", "fluoreto", "dentifrício"],
+    response: "✨ **Pasta de Dente Ideal:**\n\n• Sempre escolha pasta com **flúor** (1000-1500 ppm)\n• Use quantidade do **tamanho de uma ervilha**\n• Para crianças até 3 anos: grão de arroz\n• **Não engula** - cuspa após escovar\n• Evite enxaguar muito após escovar\n• O flúor fortalece o esmalte e previne cáries"
+  },
+  enxaguante: {
+    keywords: ["enxaguante", "bochechar", "antisséptico", "colutório", "bochecho"],
+    response: "💧 **Enxaguante Bucal:**\n\n⚠️ **NÃO substitui** escovação nem fio dental!\n\n• Use como **complemento** da higiene\n• Bocheche por **30 segundos**\n• Não coma/beba por 30 min após\n• Prefira os **sem álcool**\n• Com flúor oferece proteção extra\n• Ideal para áreas de difícil acesso"
+  },
+  carie: {
+    keywords: ["cárie", "caries", "cavidade", "buraco", "dente furado", "dente estragado"],
+    response: "🦷 **Prevenção de Cáries:**\n\n**O que causa:**\n• Bactérias + açúcar = ácido que destrói o esmalte\n\n**Como prevenir:**\n• Escove após cada refeição\n• Use fio dental diariamente\n• Reduza açúcar e carboidratos refinados\n• Pasta com flúor é essencial\n• Visite o dentista regularmente\n• Beba água com frequência"
+  },
+  gengiva: {
+    keywords: ["gengiva", "gengivas", "sangramento", "sangra", "gengivite", "periodontite", "inflamação"],
+    response: "🩸 **Saúde da Gengiva:**\n\n**Sinais de alerta:**\n• Sangramento ao escovar\n• Vermelhidão ou inchaço\n• Retração gengival\n• Mau hálito persistente\n\n**O que fazer:**\n• **Não pare** de escovar a área\n• Escove suavemente com cerdas macias\n• Use fio dental com cuidado\n• Melhore a técnica de higiene\n• Gengivas saudáveis são **rosas e firmes**"
+  },
+  halito: {
+    keywords: ["hálito", "halitose", "mau cheiro", "bafo", "cheiro ruim"],
+    response: "💨 **Combate ao Mau Hálito:**\n\n**Causas comuns:**\n• Higiene bucal inadequada\n• Língua suja\n• Boca seca\n• Restos de comida\n\n**Soluções:**\n• **Limpe a língua** sempre (90% das bactérias)\n• Use fio dental diariamente\n• Beba água regularmente\n• Evite ficar muito tempo em jejum\n• Consulte dentista se persistir"
+  },
+  lingua: {
+    keywords: ["língua", "limpar língua", "raspador", "saburra"],
+    response: "👅 **Limpeza da Língua:**\n\n• A língua acumula **90% das bactérias** da boca\n• Use **raspador de língua** ou a própria escova\n• Limpe de trás para frente\n• Faça movimentos suaves\n• Limpe **toda vez** que escovar os dentes\n• Reduz mau hálito significativamente\n• A língua saudável é rosa e lisa"
+  },
+  alimentacao: {
+    keywords: ["alimentação", "comida", "alimento", "comer", "dieta", "nutrição", "açúcar"],
+    response: "🥗 **Alimentação para Dentes Saudáveis:**\n\n✅ **Bons para os dentes:**\n• Queijo, leite, iogurte (cálcio)\n• Maçã, cenoura, aipo (limpeza natural)\n• Água (hidratação e limpeza)\n• Verduras verde-escuras\n\n❌ **Evitar/moderar:**\n• Açúcar e doces\n• Refrigerantes e sucos ácidos\n• Carboidratos refinados\n• Frutas cítricas em excesso"
+  },
+  sensibilidade: {
+    keywords: ["sensibilidade", "sensível", "dói", "gelado", "quente", "doer"],
+    response: "❄️ **Sensibilidade Dentária:**\n\n**Causas:**\n• Retração gengival\n• Esmalte desgastado\n• Escovação agressiva\n• Clareamento recente\n\n**Cuidados:**\n• Use pasta para **dentes sensíveis**\n• Escova de cerdas **extra macias**\n• Evite alimentos muito ácidos\n• Não escove com força\n• Consulte um dentista para diagnóstico"
+  },
+  clareamento: {
+    keywords: ["clareamento", "clarear", "branquear", "branco", "amarelo", "manchas"],
+    response: "✨ **Clareamento Dental:**\n\n**Tipos:**\n• Profissional (consultório) - mais seguro\n• Caseiro supervisionado\n• Pastas clareadoras (efeito leve)\n\n**Cuidados:**\n• Faça sempre com **orientação profissional**\n• Pode causar sensibilidade temporária\n• Evite alimentos pigmentados após\n• Resultados variam por pessoa\n• Mantenha boa higiene para durar"
+  },
+  crianca: {
+    keywords: ["criança", "bebê", "infantil", "filho", "filha", "dente de leite"],
+    response: "👶 **Saúde Bucal Infantil:**\n\n**Bebês:**\n• Limpe a gengiva com gaze úmida\n• Primeiro dente = primeira visita ao dentista\n\n**Crianças:**\n• Supervisione a escovação até 7-8 anos\n• Use pasta infantil com flúor adequado\n• Quantidade: grão de arroz até 3 anos\n• Ensine técnica correta desde cedo\n• Dentes de leite também precisam de cuidado!"
+  },
+  bruxismo: {
+    keywords: ["bruxismo", "ranger", "apertar", "dentes apertados", "morder"],
+    response: "😬 **Bruxismo (Ranger os Dentes):**\n\n**Sintomas:**\n• Dor na mandíbula ao acordar\n• Dentes desgastados\n• Dor de cabeça frequente\n• Sensibilidade aumentada\n\n**O que fazer:**\n• Consulte um dentista\n• Pode precisar de **placa de bruxismo**\n• Reduza estresse\n• Evite mascar chicletes\n• Relaxe a mandíbula durante o dia"
+  },
+  afta: {
+    keywords: ["afta", "aftas", "ferida", "úlcera", "machucado boca"],
+    response: "🔴 **Aftas (Úlceras Bucais):**\n\n**Causas comuns:**\n• Estresse e ansiedade\n• Baixa imunidade\n• Deficiência de vitaminas\n• Trauma local\n\n**Alívio:**\n• Geralmente cicatrizam em 7-14 dias\n• Evite alimentos ácidos/condimentados\n• Bochechos com água e sal\n• Gel anestésico para dor\n• Se não melhorar, consulte um profissional"
+  },
+  aparelho: {
+    keywords: ["aparelho", "ortodontia", "brackets", "alinhador", "dentes tortos"],
+    response: "⚙️ **Cuidados com Aparelho Ortodôntico:**\n\n**Higiene:**\n• Escove após **toda refeição**\n• Use escova interdental\n• Fio dental com passa-fio\n• Enxaguante pode ajudar\n\n**Alimentação:**\n• Evite alimentos duros e pegajosos\n• Corte frutas em pedaços\n• Cuidado com pipoca e nozes\n\n**Consultas regulares** são essenciais!"
+  },
+  implante: {
+    keywords: ["implante", "prótese", "dentadura", "dente artificial"],
+    response: "🔩 **Implantes e Próteses:**\n\n**Implantes:**\n• Substitui raiz do dente perdido\n• Processo leva alguns meses\n• Requer boa saúde óssea\n• Higiene é fundamental\n\n**Cuidados:**\n• Escove normalmente ao redor\n• Use escova interdental\n• Visite o dentista regularmente\n• Evite fumar"
+  },
+  emergencia: {
+    keywords: ["emergência", "urgente", "quebrou", "caiu", "trauma", "bateu", "acidente"],
+    response: "🚨 **Emergências Dentárias:**\n\n**Dente quebrado/lascado:**\n• Guarde o fragmento em leite\n• Procure dentista imediatamente\n\n**Dente avulsionado (caiu):**\n• Segure pela coroa, não pela raiz\n• Lave suavemente, não esfregue\n• Tente reposicionar ou guarde em leite\n• **Procure dentista em até 1 hora**\n\n**Dor intensa:** busque atendimento profissional"
+  },
+  prevencao: {
+    keywords: ["prevenção", "prevenir", "evitar", "cuidar", "manter", "rotina"],
+    response: "🛡️ **Prevenção - Rotina Ideal:**\n\n**Diariamente:**\n• Escove 3x ao dia por 2-3 min\n• Use fio dental 1x ao dia\n• Limpe a língua\n• Beba água\n\n**Periodicamente:**\n• Visite o dentista a cada **6 meses**\n• Limpeza profissional\n• Avaliação preventiva\n\n**Lembre-se:** Prevenir é muito mais fácil e barato que tratar!"
+  }
+};
 
-const initialBotMessages = [
-  "Olá! 👋 Sou o assistente de higiene bucal da Sarah Castro. Como posso te ajudar hoje?",
-  "Posso dar dicas de higiene oral, informações sobre horários e agendamentos. Digite 'dica' para receber uma dica especial! ✨",
+// Dicas aleatórias para quando não há match específico
+const randomTips = [
+  "💡 Você sabia? A saliva é uma proteção natural dos dentes! Beba água para mantê-la fluindo.",
+  "💡 Dica: Espere 30 minutos após refeições ácidas para escovar - o ácido amolece o esmalte temporariamente.",
+  "💡 Importante: A escova elétrica pode ser mais eficiente que a manual se usada corretamente.",
+  "💡 Curiosidade: O esmalte dentário é o tecido mais duro do corpo humano!",
+  "💡 Sabia que mastigar chiclete sem açúcar após refeições estimula a saliva e ajuda na limpeza?",
+  "💡 Os dentes começam a se formar ainda na gestação! Nutrição da mãe afeta a saúde bucal do bebê.",
+  "💡 Dormir de boca aberta resseca a boca e aumenta o risco de cáries e mau hálito.",
+  "💡 Evite escovar os dentes horizontalmente - movimentos circulares são mais eficazes!",
+  "💡 O consumo frequente de açúcar é pior que a quantidade total consumida.",
+  "💡 Água é a melhor bebida para os dentes - sem açúcar e ajuda a limpar a boca!"
 ];
 
 const ChatBot: React.FC = () => {
@@ -41,10 +108,15 @@ const ChatBot: React.FC = () => {
 
   useEffect(() => {
     if (isOpen && messages.length === 0) {
-      initialBotMessages.forEach((msg, index) => {
+      const initialMessages = [
+        "Olá! 👋 Sou o assistente de saúde bucal!",
+        "Posso te ajudar com informações sobre:\n\n• Escovação correta\n• Uso do fio dental\n• Prevenção de cáries\n• Cuidados com a gengiva\n• Alimentação saudável\n• E muito mais!\n\nDigite sua dúvida ou peça uma **dica**! 🦷"
+      ];
+      
+      initialMessages.forEach((msg, index) => {
         setTimeout(() => {
           setMessages(prev => [...prev, { text: msg, isBot: true }]);
-        }, 600 * (index + 1));
+        }, 500 * (index + 1));
       });
     }
   }, [isOpen]);
@@ -53,8 +125,55 @@ const ChatBot: React.FC = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
-  const getRandomTip = () => {
-    return dentalTips[Math.floor(Math.random() * dentalTips.length)];
+  const findBestMatch = (userMessage: string): string => {
+    const normalizedMessage = userMessage.toLowerCase()
+      .normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // Remove acentos para matching
+
+    // Verifica saudações
+    if (/^(oi|olá|ola|hey|bom dia|boa tarde|boa noite|e ai|eai|hello|hi)/.test(normalizedMessage)) {
+      return "Olá! 😊 Como posso ajudar com sua saúde bucal hoje?\n\nVocê pode perguntar sobre:\n• Escovação\n• Fio dental\n• Cáries\n• Gengiva\n• Alimentação\n• E muito mais!";
+    }
+
+    // Verifica agradecimentos
+    if (/obrigad|valeu|agradeç|thanks|obg/.test(normalizedMessage)) {
+      return "Por nada! 😊 Fico feliz em ajudar!\n\nLembre-se: **prevenção é o melhor remédio**. Cuide bem dos seus dentes!\n\nSe tiver mais dúvidas, é só perguntar! 🦷✨";
+    }
+
+    // Verifica pedido de dica
+    if (/dica|conselho|sugestão|sugira|recomend/.test(normalizedMessage)) {
+      return randomTips[Math.floor(Math.random() * randomTips.length)];
+    }
+
+    // Verifica perguntas sobre Sarah
+    if (/sarah|quem (é|e) você|sobre voce|criador/.test(normalizedMessage)) {
+      return "👩‍⚕️ Este assistente foi criado para o site da **Sarah Castro**, estudante de odontologia da Unichristus.\n\nO objetivo é **educar e informar** sobre saúde bucal, compartilhando conhecimento de forma acessível para todos! 🦷";
+    }
+
+    // Busca no knowledge base
+    let bestMatch: string | null = null;
+    let highestScore = 0;
+
+    for (const [, data] of Object.entries(knowledgeBase)) {
+      for (const keyword of data.keywords) {
+        const normalizedKeyword = keyword.toLowerCase()
+          .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        
+        if (normalizedMessage.includes(normalizedKeyword)) {
+          const score = normalizedKeyword.length;
+          if (score > highestScore) {
+            highestScore = score;
+            bestMatch = data.response;
+          }
+        }
+      }
+    }
+
+    if (bestMatch) {
+      return bestMatch;
+    }
+
+    // Resposta padrão com sugestões
+    return "Hmm, não encontrei informações específicas sobre isso. 🤔\n\n**Posso te ajudar com:**\n• Escovação e técnica correta\n• Uso do fio dental\n• Prevenção de cáries\n• Saúde da gengiva\n• Mau hálito\n• Alimentação\n• Sensibilidade\n• Clareamento\n• Cuidados infantis\n\nDigite uma dessas palavras-chave ou peça uma **dica**!";
   };
 
   const handleSendMessage = () => {
@@ -65,43 +184,10 @@ const ChatBot: React.FC = () => {
     setIsTyping(true);
 
     setTimeout(() => {
-      let botResponse = "Desculpe, não entendi. Tente perguntar sobre: higiene bucal, escovação, fio dental, dicas ou horários de atendimento. 😊";
-
-      const userMessage = inputText.toLowerCase();
-      
-      if (userMessage.includes("dica") || userMessage.includes("conselho") || userMessage.includes("sugestão")) {
-        botResponse = getRandomTip();
-      } else if (userMessage.includes("horário") || userMessage.includes("atendimento") || userMessage.includes("funciona")) {
-        botResponse = "🕐 Horários de atendimento:\n\n• Quartas-feiras: 7:20 às 10:30 (atendimentos gerais)\n• Sextas-feiras: 7:20 às 10:30 (radiografias)\n\nO atendimento é realizado na clínica-escola da Unichristus!";
-      } else if (userMessage.includes("consulta") || userMessage.includes("agendar") || userMessage.includes("marcar")) {
-        botResponse = "📅 Para agendar uma consulta, entre em contato pelo WhatsApp! A Sarah atende de forma supervisionada na clínica-escola da Unichristus. Será um prazer atendê-lo!";
-      } else if (userMessage.includes("fio dental") || userMessage.includes("fio")) {
-        botResponse = "🧵 Dicas de fio dental:\n\n• Use 40cm de fio (tamanho do antebraço)\n• Passe entre a gengiva e os dentes, não apenas entre os dentes\n• Faça movimentos de vai e vem suaves\n• Use diariamente, preferencialmente à noite\n• O fio limpa onde a escova não alcança!";
-      } else if (userMessage.includes("escovar") || userMessage.includes("escovação") || userMessage.includes("escova")) {
-        botResponse = "🪥 Escovação correta:\n\n• Escove por 2 minutos, 3x ao dia\n• Use escova de cerdas macias\n• Movimentos circulares, escova inclinada à gengiva\n• Escove todas as faces dos dentes\n• Troque a escova a cada 3 meses\n• Não esqueça de limpar a língua!";
-      } else if (userMessage.includes("pasta") || userMessage.includes("flúor") || userMessage.includes("creme")) {
-        botResponse = "✨ Sobre a pasta de dente:\n\n• Sempre use pasta COM FLÚOR\n• O flúor é essencial para prevenir cáries\n• Use quantidade do tamanho de uma ervilha\n• Para crianças, use pasta específica infantil\n• Não engula a pasta, cuspa após escovar!";
-      } else if (userMessage.includes("enxaguante") || userMessage.includes("bochechar") || userMessage.includes("antisséptico")) {
-        botResponse = "⚠️ Importante sobre enxaguante:\n\n• NÃO substitui escovação nem fio dental!\n• Apenas complementa a higiene\n• Reduz temporariamente bactérias\n• Refresca o hálito\n• Alguns contêm flúor para proteção extra\n• Use após a escovação completa.";
-      } else if (userMessage.includes("sarah") || userMessage.includes("quem")) {
-        botResponse = "👩‍⚕️ Sarah Castro é estudante de odontologia da Unichristus. Ela atende pacientes de forma supervisionada e tem como missão transmitir conhecimento sobre autocuidado e higiene oral através de orientações educativas!";
-      } else if (userMessage.includes("cárie") || userMessage.includes("caries") || userMessage.includes("dor")) {
-        botResponse = "🦷 Prevenção de cáries:\n\n• Escove os dentes após cada refeição\n• Use fio dental diariamente\n• Evite açúcar em excesso\n• Visite o dentista regularmente\n• Pasta com flúor é essencial\n\nSe sentir dor, procure um dentista o mais rápido possível!";
-      } else if (userMessage.includes("mau hálito") || userMessage.includes("halitose") || userMessage.includes("hálito")) {
-        botResponse = "💨 Combater mau hálito:\n\n• Escove a língua sempre\n• Use fio dental (restos de comida causam odor)\n• Beba água regularmente\n• Evite ficar muito tempo sem comer\n• Se persistir, consulte um dentista\n• Pode indicar problemas bucais ou digestivos.";
-      } else if (userMessage.includes("alimentação") || userMessage.includes("comida") || userMessage.includes("alimento") || userMessage.includes("comer")) {
-        botResponse = "🥗 Alimentação para dentes saudáveis:\n\n✅ Bom: leite, queijo, iogurte, vegetais, frutas fibrosas (maçã, cenoura)\n\n❌ Evitar: doces em excesso, refrigerantes, bebidas ácidas, fast-food\n\n💡 Quanto mais colorido o prato, mais nutrientes!";
-      } else if (userMessage.includes("obrigad") || userMessage.includes("valeu") || userMessage.includes("agradeço")) {
-        botResponse = "De nada! 😊 Fico feliz em ajudar! Lembre-se: a prevenção é o melhor remédio. Cuide bem dos seus dentes! Se tiver mais dúvidas, é só perguntar! 🦷✨";
-      } else if (userMessage.includes("olá") || userMessage.includes("oi") || userMessage.includes("hey") || userMessage.includes("bom dia") || userMessage.includes("boa tarde") || userMessage.includes("boa noite")) {
-        botResponse = "Olá! 😊 Que bom te ver por aqui! Posso te ajudar com:\n\n• Dicas de higiene bucal\n• Informações sobre escovação\n• Como usar fio dental\n• Horários de atendimento\n\nDigite 'dica' para receber uma dica especial!";
-      } else if (userMessage.includes("gengiva") || userMessage.includes("sangr")) {
-        botResponse = "🩸 Sobre gengivas:\n\n• Sangramento pode indicar gengivite\n• Escove suavemente, mas não evite a área\n• Use fio dental com cuidado\n• Melhore a higiene bucal\n• Se persistir, consulte um dentista\n\nGengivas saudáveis são rosas e firmes!";
-      }
-
+      const botResponse = findBestMatch(inputText);
       setIsTyping(false);
       setMessages(prev => [...prev, { text: botResponse, isBot: true }]);
-    }, 1200);
+    }, 800 + Math.random() * 600);
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -132,7 +218,7 @@ const ChatBot: React.FC = () => {
               </div>
               <div>
                 <h3 className="text-primary-foreground font-semibold">Assistente Bucal</h3>
-                <p className="text-primary-foreground/80 text-xs">Dicas de higiene oral</p>
+                <p className="text-primary-foreground/80 text-xs">Informações de saúde oral</p>
               </div>
             </div>
             <Button 
@@ -179,7 +265,7 @@ const ChatBot: React.FC = () => {
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}
                 onKeyPress={handleKeyPress}
-                placeholder="Pergunte sobre higiene bucal..."
+                placeholder="Pergunte sobre saúde bucal..."
                 className="flex-1 rounded-full border-primary/30 focus:border-primary"
               />
               <Button 
