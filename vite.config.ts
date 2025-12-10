@@ -9,11 +9,19 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
+
+  // 👇 ADIÇÃO OBRIGATÓRIA PARA A VERCEL
+  build: {
+    outDir: "dist",
+  },
+
   plugins: [
     react(),
-    mode === 'development' &&
-    componentTagger(),
+
+    // 👇 evita erro no build da Vercel
+    mode === "development" && componentTagger(),
   ].filter(Boolean),
+
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
