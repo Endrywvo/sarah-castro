@@ -62,21 +62,21 @@
   }
 
   .service-card {
-    @apply transition-all duration-300 ease-out;
+    transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
 
   .service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(219, 83, 109, 0.15);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(219, 83, 109, 0.1);
   }
 
   .chat-bubble {
-    animation: bubble-in 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    animation: bubble-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
 
   @keyframes bubble-in {
     0% {
-      transform: scale(0) translateY(10px);
+      transform: scale(0.95) translateY(8px);
       opacity: 0;
     }
     100% {
@@ -86,13 +86,13 @@
   }
 
   .fade-in-up {
-    animation: fade-in-up 0.6s ease-out forwards;
+    animation: fade-in-up 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
   }
 
   @keyframes fade-in-up {
     0% {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(16px);
     }
     100% {
       opacity: 1;
@@ -101,13 +101,13 @@
   }
 
   .scale-in {
-    animation: scale-in 0.5s ease-out forwards;
+    animation: scale-in 0.7s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
   }
 
   @keyframes scale-in {
     0% {
       opacity: 0;
-      transform: scale(0.9);
+      transform: scale(0.96);
     }
     100% {
       opacity: 1;
@@ -116,13 +116,13 @@
   }
 
   .slide-in-right {
-    animation: slide-in-right 0.4s ease-out forwards;
+    animation: slide-in-right 0.5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
   }
 
   @keyframes slide-in-right {
     0% {
       opacity: 0;
-      transform: translateX(20px);
+      transform: translateX(12px);
     }
     100% {
       opacity: 1;
@@ -131,20 +131,22 @@
   }
 
   .pulse-soft {
-    animation: pulse-soft 2s ease-in-out infinite;
+    animation: pulse-soft 4s cubic-bezier(0.45, 0, 0.55, 1) infinite;
   }
 
   @keyframes pulse-soft {
     0%, 100% {
       transform: scale(1);
+      opacity: 1;
     }
     50% {
-      transform: scale(1.05);
+      transform: scale(1.02);
+      opacity: 0.95;
     }
   }
 
   .float {
-    animation: float 3s ease-in-out infinite;
+    animation: float 5s cubic-bezier(0.45, 0, 0.55, 1) infinite;
   }
 
   @keyframes float {
@@ -152,17 +154,17 @@
       transform: translateY(0);
     }
     50% {
-      transform: translateY(-10px);
+      transform: translateY(-6px);
     }
   }
 
   .hover-lift {
-    @apply transition-all duration-300 ease-out;
+    transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
 
   .hover-lift:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgba(219, 83, 109, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(219, 83, 109, 0.12);
   }
 
   .gradient-text {
