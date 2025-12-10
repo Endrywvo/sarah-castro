@@ -39,16 +39,16 @@ const HeroSection: React.FC = () => {
             </div>
           </div>
           
-          <div className="lg:w-1/2 flex justify-center">
+          <div className="lg:w-1/2 flex justify-center px-4">
             <div className="relative scale-in">
-              <div className="w-80 h-80 bg-primary/20 rounded-full flex items-center justify-center backdrop-blur-sm float">
-                <Stethoscope size={120} className="text-primary/70" />
+              <div className="w-64 h-64 md:w-80 md:h-80 bg-primary/20 rounded-full flex items-center justify-center backdrop-blur-sm float">
+                <Stethoscope size={100} className="text-primary/70 md:w-[120px] md:h-[120px]" />
               </div>
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-secondary rounded-full flex items-center justify-center shadow-lg pulse-soft">
-                <span className="text-4xl">🦷</span>
+              <div className="absolute top-0 right-0 w-16 h-16 md:w-20 md:h-20 bg-secondary rounded-full flex items-center justify-center shadow-lg pulse-soft">
+                <span className="text-3xl md:text-4xl">🦷</span>
               </div>
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-card rounded-full flex items-center justify-center shadow-lg pulse-soft" style={{ animationDelay: '0.5s' }}>
-                <span className="text-3xl">✨</span>
+              <div className="absolute bottom-0 left-0 w-12 h-12 md:w-16 md:h-16 bg-card rounded-full flex items-center justify-center shadow-lg pulse-soft" style={{ animationDelay: '0.5s' }}>
+                <span className="text-2xl md:text-3xl">✨</span>
               </div>
             </div>
           </div>
